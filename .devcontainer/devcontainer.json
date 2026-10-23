@@ -1,0 +1,13 @@
+{
+  "name": "Протоколист планёрок",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "cd meeting_bot && python -m venv .venv && .venv/bin/pip install --upgrade pip && .venv/bin/pip install -r requirements.txt && echo ok > .venv/installed.ok && cp -n .env.example .env",
+  "secrets": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Токен бота от @BotFather"
+    },
+    "ANTHROPIC_API_KEY": {
+      "description": "Ключ Claude API с console.anthropic.com"
+    }
+  }
+}
