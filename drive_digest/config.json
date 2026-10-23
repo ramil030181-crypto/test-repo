@@ -1,0 +1,29 @@
+{
+  "_comment": "Настройки сводки отчётов подразделений. После изменения: python3 drive_digest/render_prompts.py и обновить текст обеих запланированных задач.",
+  "timezone": "Asia/Qyzylorda",
+  "timezone_label": "UTC+5",
+  "recipients": ["ramil030181@gmail.com"],
+  "drive": {
+    "inbox_folder_id": "1QlM8yokYAHOhBZ1fWBnI7HoomMKKnjUk",
+    "service_folder_id": "1EKfejHaK5VoUysQcx86Tx0-TdPH9vBQD",
+    "registry_folder_id": "1BOK9MThTBhV9jcSbo_eDDJPZlj_VN5An",
+    "reports_folder_id": "1vgPYZjXa3GJsmk87yoIyDfBOIYnM6x5N",
+    "registry_monthly_folder_id": "1h7yHIIDeW-LLnCQXvoiZOFS4Keuti-J4",
+    "templates_folder_id": "1U42i1Xx1ZbuLW6_dmpsFdUEkATyKz-9V"
+  },
+  "schedule": {
+    "scan_cron": "CRON_TZ=Asia/Qyzylorda 40 7-18 * * *",
+    "report_cron": "CRON_TZ=Asia/Qyzylorda 5 17 * * *"
+  },
+  "limits": {
+    "scan_window_days": 14,
+    "max_files_per_scan": 20,
+    "max_files_per_report_run": 40
+  },
+  "urgent_criteria": [
+    "авария, остановка или отказ оборудования, установки, линии",
+    "сорванный срок или прямое указание, что срок будет сорван",
+    "угроза безопасности людей, пожар, утечка, экологический инцидент",
+    "требование ответа или решения сегодня"
+  ]
+}
